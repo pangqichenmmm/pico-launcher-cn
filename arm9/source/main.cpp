@@ -26,6 +26,8 @@
 #include "NotoSansJP-Medium-7_5_nft2.h"
 #include "NotoSansJP-Medium-10_nft2.h"
 #include "NotoSansJP-Medium-11_nft2.h"
+#include "PicoCN-Small_nft2.h"
+#include "PicoCN-Regular_nft2.h"
 #include "gui/font/nitroFont2.h"
 #include "picoLoaderBootstrap.h"
 #include "rtcIpc.h"
@@ -218,6 +220,10 @@ int main(int argc, char* argv[])
     nft2_unpack((nft2_header_t*)NotoSansJP_Medium_10_nft2);
     nft2_unpack((nft2_header_t*)NotoSansJP_Medium_11_nft2);
     nft2_unpack((nft2_header_t*)NotoSansJP_Medium_7_5_nft2);
+    nft2_unpack((nft2_header_t*)PicoCN_Small_nft2);
+    nft2_unpack((nft2_header_t*)PicoCN_Regular_nft2);
+    nft2_setFallbackFonts((const nft2_header_t*)PicoCN_Small_nft2,
+                          (const nft2_header_t*)PicoCN_Regular_nft2);
 
     gProcessManager.Goto<App>();
     gProcessManager.MainLoop();
