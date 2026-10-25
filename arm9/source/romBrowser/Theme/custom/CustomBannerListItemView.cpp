@@ -37,7 +37,7 @@ CustomBannerListItemView::CustomBannerListItemView(std::unique_ptr<IRomBrowserIt
     u32 selectedTexVramOffset, u32 selectedPlttVramOffset,
     VBlankTextureLoader* vblankTextureLoader)
     : BannerListItemView(std::move(viewModel),
-        Label3DView::CreateShared(LINE_WIDTH, LINE_HEIGHT, MAX_LINE_STRING_LENGTH,
+        Label3DView::CreateShared(LINE_WIDTH, LINE_HEIGHT, 256,
             fontRepository->GetFont(FontType::Medium10), vblankTextureLoader),
         Label3DView::CreateShared(LINE_WIDTH, LINE_HEIGHT, MAX_LINE_STRING_LENGTH,
             fontRepository->GetFont(FontType::Regular10), vblankTextureLoader),
