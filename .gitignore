@@ -47,3 +47,13 @@ Thumbs.db
 *.elf
 *.a
 .vscode/
+
+# Local Chinese edition build tools and deliverables
+.tools/
+.cache/
+dist/
+releases/
+__pycache__/
+*.stackdump
+# Local upload assessment contains workstation/account housekeeping notes.
+/docs/FORK-READINESS-CN.md

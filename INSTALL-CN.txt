@@ -1,0 +1,36 @@
+Pico Launcher CN 0.1.1 — 文件名显示测试版
+
+这是基于 LNH team 官方 Pico Launcher 的个人中文显示派生版本。
+适用于已经安装 Pico Launcher／Pico Loader 的 DS Pico SD 卡。
+
+安装：
+1. 把 SD 卡根目录原来的 _picoboot.nds 复制到电脑，保留备份。
+2. 直接将下载的 _picoboot.nds 复制到 SD 卡根目录，覆盖原文件，无需解压。
+   从源码本地构建的程序位于 releases/0.1.1-filename-test/_picoboot.nds。
+3. 保留现有 _pico 文件夹和其中的 Pico Loader 文件。
+4. 启动 DS Pico，列表与上屏的主标题将显示实际文件名。
+   例如黄金太阳会显示“黄金太阳 漆黑的黎明 1.1(JP)...nds”，而非 ROM 的日文标题。
+   列表中选中较长的名称后稍等，会滚动显示后半段。
+
+恢复：将电脑上备份的原 _picoboot.nds 复制回 SD 卡根目录。
+如果电脑上保留了上一版中文 banner 菜单，也可以复制该版本恢复。
+
+本版支持 GB2312 的 6763 个汉字和相关符号。设置与提示沿用原版语言。
+文件名中的版本号、汉化组、括号与 .nds 等扩展名保留，图标和封面继续使用。
+菜单约 1.43 MiB，比此次对照构建增加约 0.97 MiB。
+
+电脑验证：编译、真实黑2 banner 标题选择、中文文件名、四种字体、裁切、
+长标题省略、2D／3D 绘制一致性及二进制 CRC 已通过。
+
+NDS／DS Lite、DSi 和 3DS／2DS 均为兼容目标；这个新版的文件名显示行为尚待真机试跑。
+docs/previews/Chinese-render-preview.png 是电脑上的实际文字绘制预览，非真机截图。
+docs/previews/Filename-render-preview.png 展示黄金太阳的原 banner 文字与新版文件名显示示例。
+完整测试记录见源码中的 docs/TESTING-CN.md，结构化结果见随程序提供的 validation.json。
+
+上游：https://github.com/LNH-team/pico-launcher
+基线提交：dc64a34cabe26a9ac12d5592ada2d729cdfc6328
+源码中的字体声明和许可在 fonts/；原项目和组件许可在 LICENSE.txt、licenses/。
+程序下载附件中同时提供 LICENSE.txt、FONT-OFL-1.1.txt、FONT-NOTICE.txt
+和 THIRD-PARTY-LICENSES.txt，请随程序保留这些声明。
+
+这里的 .nds 文件只替换选游戏菜单，不能用于恢复或改写卡带的 .uf2 硬件固件。
