@@ -58,14 +58,6 @@ void RomBrowserTopScreenView::Update()
             const auto& item = fileInfoManager.GetItem(selectedItem);
             auto info = fileInfoManager.GetInternalFileInfo(selectedItem);
 
-            bool fileNameAsTitle = true;
-            const char16_t* gameTitle = info ? info->GetGameTitle() : nullptr;
-            if (gameTitle && gameTitle[0] != 0)
-            {
-                _fileInfoView->SetGameTitleAsync(_viewModel->GetBgTaskQueue(), gameTitle);
-                fileNameAsTitle = false;
-            }
-
             _selectedFileIcon = info ? info->CreateGameIcon() : nullptr;
             if (!_selectedFileIcon)
             {
@@ -77,7 +69,7 @@ void RomBrowserTopScreenView::Update()
                 _iconGraphicsUploaded = false;
             }
             _fileInfoView->SetIcon(std::move(_selectedFileIcon));
-            _fileInfoView->SetFileNameAsync(_viewModel->GetBgTaskQueue(), item.GetFileName(), fileNameAsTitle);
+            _fileInfoView->SetFileNameAsync(_viewModel->GetBgTaskQueue(), item.GetFileName(), true);
 
             _lastSelectedItem = selectedItem;
 
