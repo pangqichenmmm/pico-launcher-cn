@@ -1,39 +1,38 @@
-name: Build Pico Launcher release
+name: Publish Pico Launcher CN files
 
 on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+
 jobs:
-  pico_launcher:
-    runs-on: ubuntu-latest
-    container: skylyrac/blocksds:slim-v1.16.0
-    name: Build Pico Launcher
+  build:
+    uses: ./.github/workflows/nightly.yml
+  publish:
+    name: Attach directly usable files
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Download verified build
+        uses: actions/download-artifact@v4
         with:
-          submodules: true
-      - name: Install zip
-        run:
-          apt-get update && apt-get -y install zip
-      - name: Run build script
-        run: |
-          make
-      - name: Publish build to GH Actions
-        uses: actions/upload-artifact@v4
-        with:
-          path: |
-            _pico/
-            LAUNCHER.nds
-          name: Pico_Launcher
-      - name: Package for release
-        run: |
-          mkdir Pico_Launcher
-          cp -r _pico/ LAUNCHER.nds Pico_Launcher
-          cd Pico_Launcher && zip -r $PWD.zip *
-      - name: Release
+          name: Pico_Launcher_CN
+          path: release-files
+      - name: Attach program and notices individually
         uses: softprops/action-gh-release@v2
         with:
+          fail_on_unmatched_files: true
           files: |
-            Pico_Launcher.zip
+            release-files/_picoboot.nds
+            release-files/SHA256SUMS.txt
+            release-files/INSTALL-CN.txt
+            release-files/LICENSE.txt
+            release-files/FONT-OFL-1.1.txt
+            release-files/FONT-NOTICE.txt
+            release-files/THIRD-PARTY-LICENSES.txt
+            release-files/validation.json
+            release-files/native-tests.txt
