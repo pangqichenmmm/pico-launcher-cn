@@ -1,0 +1,144 @@
+{
+  "packages": [
+    {
+      "name": "blocksds-toolchain",
+      "url": "https://blocksds.skylyrac.net/packages/rolling/windows/x86_64/blocksds-toolchain-1.24.0-1-x86_64.pkg.tar.xz",
+      "sha256": "23f78983ac9706b2da4e91ec30d8c412cbc387d7ded42097e98a8daead6d3af7",
+      "bytes": 3055648,
+      "dependencies": [
+        "toolchain-gcc-arm-none-eabi-binutils",
+        "toolchain-gcc-arm-none-eabi-gcc-libs",
+        "toolchain-gcc-arm-none-eabi-gcc",
+        "toolchain-gcc-arm-none-eabi-picolibc-generic",
+        "toolchain-gcc-arm-none-eabi-libstdcxx-picolibc",
+        "runtime-gcc-libs"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-cc-libs",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-cc-libs-16.2.0-6-any.pkg.tar.zst",
+      "sha256": "d8fff9e62443168bcda8ce746697243519c4f090ea607357ce94feac0bd10a50",
+      "bytes": 2343,
+      "dependencies": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libstdc++=16.2.0-6"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-gettext-runtime",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-1.0-1-any.pkg.tar.zst",
+      "sha256": "ba693dda4ac375af76ce481ff3a6e7481286546cc7dc6d56c7021dae34084157",
+      "bytes": 417977,
+      "dependencies": [
+        "mingw-w64-ucrt-x86_64-cc-libs",
+        "mingw-w64-ucrt-x86_64-libiconv"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libgcc",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgcc-16.2.0-6-any.pkg.tar.zst",
+      "sha256": "80b2497f019977dd9528b1abc8621b1328a0115ab1f724047ccbb56bf323f11d",
+      "bytes": 77191,
+      "dependencies": [
+        "mingw-w64-ucrt-x86_64-libwinpthread"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libiconv",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libiconv-1.19-1-any.pkg.tar.zst",
+      "sha256": "9a500f38c2b91808741c62fae746b3e9110b33a1ecf5c30fa0c66dbedddf7e16",
+      "bytes": 744750,
+      "dependencies": []
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libstdc++",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libstdc++-16.2.0-6-any.pkg.tar.zst",
+      "sha256": "33c5e58a85a538cf843a8672991cce591f0231d66da3b66a57629712d64be17f",
+      "bytes": 795910,
+      "dependencies": [
+        "mingw-w64-ucrt-x86_64-libgcc=16.2.0-6",
+        "mingw-w64-ucrt-x86_64-libwinpthread",
+        "mingw-w64-ucrt-x86_64-tzdata"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-libwinpthread",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libwinpthread-14.0.0.r532.gdbbc8e99d-1-any.pkg.tar.zst",
+      "sha256": "caab3068ad48dbefd39d88f7ec39778d1ce452f8e7dda0670344462b598d86ec",
+      "bytes": 33772,
+      "dependencies": []
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-make",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-make-4.4.1-5-any.pkg.tar.zst",
+      "sha256": "871f760657a360279f29b945a7fd7d9655fe46a3e1e06dd783c9e74514aa0b27",
+      "bytes": 129076,
+      "dependencies": [
+        "mingw-w64-ucrt-x86_64-gettext-runtime"
+      ]
+    },
+    {
+      "name": "mingw-w64-ucrt-x86_64-tzdata",
+      "url": "https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tzdata-2026e-1-any.pkg.tar.zst",
+      "sha256": "f1809089f8ed5cec858ae8584289172896eb921be1e78ba583555f74e9015428",
+      "bytes": 225916,
+      "dependencies": []
+    },
+    {
+      "name": "runtime-gcc-libs",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/runtime-gcc-libs-0.1.0-14-x86_64.pkg.tar.xz",
+      "sha256": "9abede0b8086acc4c76a1f42b4001c50c56f4115174cafb872eb18acfab86376",
+      "bytes": 1910904,
+      "dependencies": []
+    },
+    {
+      "name": "toolchain-gcc-arm-none-eabi-binutils",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/toolchain-gcc-arm-none-eabi-binutils-2.47-2-x86_64.pkg.tar.xz",
+      "sha256": "03e9b4eb1eabcb0929e1ee6822b970a4392f4873fb1e491c0f7ba03148d43a64",
+      "bytes": 2347332,
+      "dependencies": [
+        "runtime-gcc-libs"
+      ]
+    },
+    {
+      "name": "toolchain-gcc-arm-none-eabi-gcc",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/toolchain-gcc-arm-none-eabi-gcc-1~16.2.0.r229124.be93d9d35bf-1-x86_64.pkg.tar.xz",
+      "sha256": "6675be3e2fd4484f36eefac3a47c4d6aeb0eaf8bd3ebfdecc5b585d1f019f8a6",
+      "bytes": 55783392,
+      "dependencies": [
+        "toolchain-gcc-arm-none-eabi-binutils",
+        "runtime-gcc-libs"
+      ]
+    },
+    {
+      "name": "toolchain-gcc-arm-none-eabi-gcc-libs",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/toolchain-gcc-arm-none-eabi-gcc-libs-1~16.2.0.r229124.be93d9d35bf-1-x86_64.pkg.tar.xz",
+      "sha256": "4dd9c95db19c25a2938c57552eb0ea1d6de0dd7d2c0d6c7f39a1468e39be533e",
+      "bytes": 2874132,
+      "dependencies": [
+        "toolchain-gcc-arm-none-eabi-binutils",
+        "toolchain-gcc-arm-none-eabi-gcc"
+      ]
+    },
+    {
+      "name": "toolchain-gcc-arm-none-eabi-libstdcxx-picolibc",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/toolchain-gcc-arm-none-eabi-libstdcxx-picolibc-16.2.0.r229124.be93d9d35bf-1-any.pkg.tar.xz",
+      "sha256": "fc9a01673f955b3ea8feadb030972a911e582cd9277d1fa433a20a31fad2fb7b",
+      "bytes": 73689076,
+      "dependencies": [
+        "toolchain-gcc-arm-none-eabi-gcc",
+        "toolchain-gcc-arm-none-eabi-picolibc-generic"
+      ]
+    },
+    {
+      "name": "toolchain-gcc-arm-none-eabi-picolibc-generic",
+      "url": "https://wonderful.asie.pl/packages/rolling/windows/x86_64/toolchain-gcc-arm-none-eabi-picolibc-generic-1.8.13.r26367.770d86889-1-any.pkg.tar.xz",
+      "sha256": "6182b3db3750644bb0acf76ebc4e6c71e32d46ac57859857d21e9efe39662c0d",
+      "bytes": 13310116,
+      "dependencies": [
+        "toolchain-gcc-arm-none-eabi-binutils",
+        "toolchain-gcc-arm-none-eabi-gcc"
+      ]
+    }
+  ]
+}
