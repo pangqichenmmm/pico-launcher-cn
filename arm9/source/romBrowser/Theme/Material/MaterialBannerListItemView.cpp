@@ -21,7 +21,7 @@
 MaterialBannerListItemView::MaterialBannerListItemView(std::unique_ptr<IRomBrowserItemViewModel> viewModel,
     const MaterialColorScheme* materialColorScheme, const IFontRepository* fontRepository)
     : BannerListItemView(std::move(viewModel),
-        Label2DView::CreateShared(152, 16, 128, fontRepository->GetFont(FontType::Medium10)),
+        Label2DView::CreateShared(152, 16, 256, fontRepository->GetFont(FontType::Medium10)),
         Label2DView::CreateShared(152, 16, 128, fontRepository->GetFont(FontType::Regular10)),
         Label2DView::CreateShared(152, 16, 128, fontRepository->GetFont(FontType::Regular10)))
     , _materialColorScheme(materialColorScheme) { }

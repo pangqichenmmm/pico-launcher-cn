@@ -13,7 +13,7 @@
 
 MaterialFileInfoCardView::MaterialFileInfoCardView(const MaterialColorScheme* materialColorScheme,
     const IFontRepository* fontRepository)
-    : _firstLine(Label2DView::CreateShared(168, 16, 128, fontRepository->GetFont(FontType::Medium11)))
+    : _firstLine(Label2DView::CreateShared(168, 16, 256, fontRepository->GetFont(FontType::Medium11)))
     , _secondLine(Label2DView::CreateShared(168, 16, 128, fontRepository->GetFont(FontType::Regular10)))
     , _thirdLine(Label2DView::CreateShared(168, 16, 128, fontRepository->GetFont(FontType::Regular10)))
     , _filenameLabelView(Label2DView::CreateShared(220, 16, 256, fontRepository->GetFont(FontType::Medium7_5)))
