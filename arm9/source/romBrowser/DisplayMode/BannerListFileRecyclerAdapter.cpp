@@ -31,17 +31,9 @@ TaskResult<void> BannerListFileRecyclerAdapter::BindView(SharedPtr<View> view, i
     auto listItemView = static_cast<BannerListItemView*>(view.GetPointer());
     listItemView->GetViewModel().SetIndex(index);
     const auto& fileInfo = _fileInfoManager->GetItem(index);
-    bool fileNameAsTitle = true;
-    if (internalFileInfo)
-    {
-        const char16_t* gameTitle = internalFileInfo->GetGameTitle();
-        if (gameTitle && gameTitle[0] != 0)
-        {
-            listItemView->SetGameTitle(gameTitle);
-            fileNameAsTitle = false;
-        }
-    }
-    listItemView->SetFileName(fileInfo.GetFileName(), fileNameAsTitle);
+    // The filename edition uses the SD-card name for every file and folder.
+    // Banner metadata is still loaded below for the original (animated) icon.
+    listItemView->SetFileName(fileInfo.GetFileName(), true);
     auto icon = internalFileInfo ? internalFileInfo->CreateGameIcon() : nullptr;
     if (!icon)
     {
