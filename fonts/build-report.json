@@ -1,0 +1,23 @@
+{
+  "source_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+  "fonts": {
+    "PicoCN-Small": {
+      "pixels": 9,
+      "ascend": 8,
+      "descend": 2,
+      "glyphs": 7448,
+      "mapped_characters": 7447,
+      "bytes": 396963,
+      "sha256": "638374aeb9da2c4c83d56ccafe99b7fae03ff58dc734166f5a25a6fa8c5df2b7"
+    },
+    "PicoCN-Regular": {
+      "pixels": 12,
+      "ascend": 11,
+      "descend": 2,
+      "glyphs": 7448,
+      "mapped_characters": 7447,
+      "bytes": 614519,
+      "sha256": "39ab58c0937e0e3d7732f08bfdf9f39e0494d486558b0a7c3672141f8884cf74"
+    }
+  }
+}

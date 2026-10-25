@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/LNH-team/pico-launcher",
+  "commit": "dc64a34cabe26a9ac12d5592ada2d729cdfc6328",
+  "libtwl_commit": "aa3b2a23c10185a10449ffa685bb7933d5d5a784",
+  "baseline_binary_bytes": 491008,
+  "sha256": {
+    "NotoSansJP-Medium-10.nft2": "00fe363293f6a614cc6c5a0ed4fc632c87bacf23b30650e41c87589064b2dad1",
+    "NotoSansJP-Medium-11.nft2": "760fbf9f6767fb223c889725748908e2bffa7e890c5cd090b7b57e5ef057a005",
+    "NotoSansJP-Medium-7_5.nft2": "9ad2775e565f64903d2a14aefc4a46557a0c6439d752724607c0433cbe66032e",
+    "NotoSansJP-Regular-10.nft2": "a7b761001f7e7de5930311b7ab79acbd6ea0aa2c601ed1b315d66be609eebd45"
+  }
+}

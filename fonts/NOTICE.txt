@@ -1,0 +1,9 @@
+PicoCN shared CJK fallback fonts
+
+Derived from Noto Sans CJK SC Regular under SIL OFL 1.1.
+Source: https://github.com/notofonts/noto-cjk
+© 2014-2021 Adobe (http://www.adobe.com/).
+
+Modified for Pico Launcher CN: subset to GB2312 characters, rasterized
+at 9/12 pixels, and converted to NFT2. These are modified fonts named
+PicoCN; they are not original or unmodified Noto font releases.
