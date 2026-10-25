@@ -3,6 +3,7 @@
 #include <nds/arm9/cache.h>
 #include "fat/File.h"
 #include "Nds/NdsFileIcon.h"
+#include "Nds/ndsBannerTitle.h"
 #include "NdsBannerInternalFileInfo.h"
 
 bool NdsBannerInternalFileInfo::ReadBannerChunks(File& file, u32 availableSize)
@@ -41,6 +42,10 @@ bool NdsBannerInternalFileInfo::ReadBannerChunks(File& file, u32 availableSize)
         return false;
     }
 
+    for (int i = 0; i < 8; ++i)
+    {
+        _banner.title[i][127] = 0;
+    }
     DC_FlushRange(&_banner, sizeof(_banner));
     return true;
 }
@@ -64,26 +69,5 @@ const char16_t* NdsBannerInternalFileInfo::GetGameTitle() const
         return nullptr;
     }
 
-    const char16_t* title = _banner.title[NDS_BANNER_TITLE_LANGUAGE_ENGLISH];
-    if (title && title[0] != 0)
-    {
-        return title;
-    }
-
-    title = _banner.title[NDS_BANNER_TITLE_LANGUAGE_JAPANESE];
-    if (title && title[0] != 0)
-    {
-        return title;
-    }
-
-    for (int i = NDS_BANNER_TITLE_LANGUAGE_FRENCH; i <= NDS_BANNER_TITLE_LANGUAGE_KOREAN; i++)
-    {
-        title = _banner.title[i];
-        if (title && title[0] != 0)
-        {
-            return title;
-        }
-    }
-
-    return nullptr;
+    return nds_getPreferredBannerTitle(_banner);
 }
