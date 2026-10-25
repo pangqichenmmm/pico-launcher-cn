@@ -48,6 +48,9 @@ struct nft2_string_render_params_t
 /// @return True if preparing was successful, or false otherwise.
 bool nft2_unpack(nft2_header_t* font);
 
+// Share two CJK atlases across the existing UI fonts. Pass nullptr to disable.
+void nft2_setFallbackFonts(const nft2_header_t* small, const nft2_header_t* regular);
+
 /// @brief Finds the glyph index in the given \p font that corresponds to the given \p character.
 /// @param font The font the find the glyph index in.
 /// @param character The character to find the glyph index for.
